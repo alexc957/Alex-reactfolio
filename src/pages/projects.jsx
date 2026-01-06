@@ -9,7 +9,7 @@ import AllProjects from "../components/projects/allProjects";
 import INFO from "../data/user";
 import SEO from "../data/seo";
 
-import "./styles/projects.css";
+import "./styles/projects.scss";
 
 const Projects = () => {
 	useEffect(() => {

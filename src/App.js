@@ -11,7 +11,7 @@ import Contact from "./pages/contact";
 import Notfound from "./pages/404";
 
 import { TRACKING_ID } from "./data/tracking";
-import "./app.css";
+import "./app.scss";
 
 function App() {
 	useEffect(() => {

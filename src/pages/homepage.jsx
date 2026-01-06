@@ -21,7 +21,7 @@ import INFO from "../data/user";
 import SEO from "../data/seo";
 import myArticles from "../data/articles";
 
-import "./styles/homepage.css";
+import "./styles/homepage.scss";
 
 const Homepage = () => {
 	const [stayLogo, setStayLogo] = useState(false);

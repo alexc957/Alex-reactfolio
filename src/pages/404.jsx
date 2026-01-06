@@ -8,7 +8,7 @@ import Logo from "../components/common/logo";
 
 import INFO from "../data/user";
 
-import "./styles/404.css";
+import "./styles/404.scss";
 
 const Notfound = () => {
 	useEffect(() => {

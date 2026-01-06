@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronRight } from "@fortawesome/free-solid-svg-icons";
 
-import "./style/article.css";
+import "./style/article.scss";
 
 const Article = (props) => {
 	const { date, title, description, link } = props;

@@ -10,7 +10,7 @@ import INFO from "../data/user";
 import SEO from "../data/seo";
 import myArticles from "../data/articles";
 
-import "./styles/articles.css";
+import "./styles/articles.scss";
 
 const Articles = () => {
 	useEffect(() => {

@@ -10,7 +10,7 @@ import Logo from "../components/common/logo";
 import INFO from "../data/user";
 import myArticles from "../data/articles";
 
-import "./styles/readArticle.css";
+import "./styles/readArticle.scss";
 
 let ArticleStyle = styled.div``;
 
