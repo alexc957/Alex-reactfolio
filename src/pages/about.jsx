@@ -9,7 +9,7 @@ import Socials from "../components/about/socials";
 import INFO from "../data/user";
 import SEO from "../data/seo";
 
-import "./styles/about.css";
+import "./styles/about.scss";
 
 const About = () => {
 	useEffect(() => {

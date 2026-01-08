@@ -9,7 +9,7 @@ import Socials from "../components/about/socials";
 import INFO from "../data/user";
 import SEO from "../data/seo";
 
-import "./styles/contact.css";
+import "./styles/contact.scss";
 
 const Contact = () => {
 	useEffect(() => {

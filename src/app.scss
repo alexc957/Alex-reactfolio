@@ -1,4 +1,4 @@
-@import "/src/data/styles.css";
+@use "/src/data/styles.scss";
 
 ::-webkit-scrollbar {
 	width: 10px;
@@ -121,3 +121,5 @@
 		width: 100%;
 	}
 }
+
+

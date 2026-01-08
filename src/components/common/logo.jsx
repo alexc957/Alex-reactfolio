@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 import INFO from "../../data/user";
 
-import "./styles/logo.css";
+import "./styles/logo.scss";
 
 const Logo = (props) => {
 	let { width, link } = props;
