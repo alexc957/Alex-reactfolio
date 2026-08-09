@@ -23,7 +23,7 @@
 }
 
 .article-right-side:hover {
-	background: #fafafa;
+	background: var(--surface-hover);
 	opacity: 1;
 	transition: background-color 0.3s ease-in-out;
 }
@@ -31,11 +31,11 @@
 .article-date {
 	padding-top: 30px;
 	font-size: 15px;
-	color: var(--tertiary-color);
+	color: white;
 }
 
 .article-title {
-	color: #000000;
+	color: white;
 	font-size: 16px;
 	font-weight: 600;
 }
@@ -43,7 +43,7 @@
 .article-description {
 	padding-top: 10px;
 	font-size: 12px;
-	color: var(--secondary-color);
+	color: white;
 	font-weight: 480;
 	line-height: 25px;
 }

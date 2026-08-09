@@ -12,7 +12,7 @@
 }
 
 .project:hover {
-	background: #fafafa;
+	background: var(--surface-hover);
 	opacity: 1;
 	transition: background-color 0.3s ease-in-out;
 }
@@ -36,7 +36,7 @@
 
 .project-title {
 	font-family: var(--secondary-font);
-	color: var(--primary-color);
+	color: white;
 	font-size: 16px;
 	padding-top: 15px;
 	margin-bottom: 1em;
@@ -44,7 +44,7 @@
 }
 
 .project-description {
-	color: var(--secondary-color);
+	color: white;
 }
 
 .project-link {
@@ -63,6 +63,7 @@
 .project-link-text {
 	padding-left: 20px;
 	font-weight: 700;
+	color: white;
 }
 
 @media (max-width: 600px) {
