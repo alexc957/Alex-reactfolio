@@ -4,6 +4,7 @@ const INFO = {
 		name: "Alexander Coronel",
 		email: "alexcoronel1995@gmail.com",
 		logo: process.env.PUBLIC_URL + "/logo.png",
+		resume: process.env.PUBLIC_URL + "/Alexander_Coronel_Resume.pdf",
 	},
 
 	socials: {

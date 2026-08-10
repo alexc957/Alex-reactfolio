@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Helmet } from "react-helmet";
 
-import { faMailBulk } from "@fortawesome/free-solid-svg-icons";
+import { faMailBulk, faFileDownload } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
 	faGithub,
@@ -142,6 +142,18 @@ const Homepage = () => {
 									icon={faMailBulk}
 									className="homepage-social-icon"
 								/>
+							</a>
+						</div>
+
+						<div className="homepage-resume">
+							<a
+								href={INFO.main.resume}
+								target="_blank"
+								rel="noreferrer"
+								className="homepage-resume-button"
+							>
+								<FontAwesomeIcon icon={faFileDownload} />
+								Download CV
 							</a>
 						</div>
 
