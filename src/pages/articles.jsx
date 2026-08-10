@@ -8,7 +8,8 @@ import Article from "../components/articles/article";
 
 import INFO from "../data/user";
 import SEO from "../data/seo";
-import myArticles from "../data/articles";
+import internalArticles from "../data/internalArticles";
+import externalArticles from "../data/externalArticles";
 
 import "./styles/articles.scss";
 
@@ -49,22 +50,55 @@ const Articles = () => {
 						</div>
 
 						<div className="articles-container">
-							<div className="articles-wrapper">
-								{myArticles.map((article, index) => (
-									<div
-										className="articles-article"
-										key={(index + 1).toString()}
-									>
-										<Article
-											key={(index + 1).toString()}
-											date={article().date}
-											title={article().title}
-											description={article().description}
-											link={"/article/" + (index + 1)}
-										/>
+							{internalArticles.length > 0 && (
+								<>
+									<div className="articles-section-header">
+										Articles
 									</div>
-								))}
-							</div>
+									<div className="articles-wrapper">
+										{internalArticles.map((article) => (
+											<div
+												className="articles-article"
+												key={article.slug}
+											>
+												<Article
+													key={article.slug}
+													date={article.date}
+													title={article.title}
+													description={article.description}
+													image={article.image}
+													link={"/article/" + article.slug}
+												/>
+											</div>
+										))}
+									</div>
+								</>
+							)}
+
+							{externalArticles.length > 0 && (
+								<>
+									<div className="articles-section-header">
+										External
+									</div>
+									<div className="articles-wrapper">
+										{externalArticles.map((article, index) => (
+											<div
+												className="articles-article"
+												key={"ext-" + index}
+											>
+												<Article
+													key={"ext-" + index}
+													date={article.date}
+													title={article.title}
+													description={article.description}
+													image={article.image}
+													link={article.link}
+												/>
+											</div>
+										))}
+									</div>
+								</>
+							)}
 						</div>
 					</div>
 					<div className="page-footer">

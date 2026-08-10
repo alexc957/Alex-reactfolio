@@ -1,39 +1,61 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { Helmet } from "react-helmet";
-import styled from "styled-components";
+import ReactMarkdown from "react-markdown";
+import remarkGfm from "remark-gfm";
 
 import NavBar from "../components/common/navBar";
 import Footer from "../components/common/footer";
 import Logo from "../components/common/logo";
 
 import INFO from "../data/user";
-import myArticles from "../data/articles";
+import internalArticles from "../data/internalArticles";
 
 import "./styles/readArticle.scss";
 
-let ArticleStyle = styled.div``;
-
 const ReadArticle = () => {
 	const navigate = useNavigate();
-	let { slug } = useParams();
+	const { slug } = useParams();
 
-	const article = myArticles[slug - 1];
+	const [content, setContent] = useState("");
+	const [loading, setLoading] = useState(true);
+
+	const articleMeta = internalArticles.find((a) => a.slug === slug);
 
 	useEffect(() => {
 		window.scrollTo(0, 0);
-	}, [article]);
+	}, []);
 
-	ArticleStyle = styled.div`
-		${article().style}
-	`;
+	useEffect(() => {
+		if (!articleMeta) {
+			navigate("/404");
+			return;
+		}
+
+		fetch(`/articles/${slug}.md`)
+			.then((res) => {
+				if (!res.ok) throw new Error("Article not found");
+				return res.text();
+			})
+			.then((text) => {
+				setContent(text);
+				setLoading(false);
+			})
+			.catch(() => {
+				navigate("/404");
+			});
+	}, [slug, articleMeta, navigate]);
+
+	if (!articleMeta) {
+		return null;
+	}
 
 	return (
 		<React.Fragment>
 			<Helmet>
-				<title>{`${article().title} | ${INFO.main.title}`}</title>
-				<meta name="description" content={article().description} />
-				<meta name="keywords" content={article().keywords.join(", ")} />
+				<title>{`${articleMeta.title} | ${INFO.main.title}`}</title>
+				<meta name="description" content={articleMeta.description} />
+				<meta name="keywords" content={articleMeta.keywords.join(", ")} />
 			</Helmet>
 
 			<div className="page-content">
@@ -59,16 +81,22 @@ const ReadArticle = () => {
 						<div className="read-article-wrapper">
 							<div className="read-article-date-container">
 								<div className="read-article-date">
-									{article().date}
+									{articleMeta.date}
 								</div>
 							</div>
 
 							<div className="title read-article-title">
-								{article().title}
+								{articleMeta.title}
 							</div>
 
 							<div className="read-article-body">
-								<ArticleStyle>{article().body}</ArticleStyle>
+								{loading ? (
+									<p>Loading...</p>
+								) : (
+									<ReactMarkdown remarkPlugins={[remarkGfm]}>
+										{content}
+									</ReactMarkdown>
+								)}
 							</div>
 						</div>
 					</div>

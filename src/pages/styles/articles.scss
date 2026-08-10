@@ -26,6 +26,16 @@
 	flex-direction: column;
 }
 
+.articles-section-header {
+	color: var(--quaternary-color);
+	font-size: 18px;
+	font-weight: 600;
+	padding-top: 40px;
+	padding-bottom: 10px;
+	padding-left: 35px;
+	font-family: var(--primary-font);
+}
+
 .articles-wrapper {
 	padding-top: 50px;
 	padding-bottom: 50px;
