@@ -55,6 +55,26 @@
 	font-weight: 700;
 }
 
+.article-image {
+	margin-top: 12px;
+}
+
+.article-image img {
+	width: 100%;
+	max-width: 400px;
+	border-radius: 8px;
+	opacity: 0.85;
+}
+
+.article-right-side:hover .article-image img {
+	opacity: 1;
+	transition: opacity 0.3s ease-in-out;
+}
+
+.article a {
+	color: inherit;
+}
+
 @media (max-width: 1024px) {
 	.article-left-side {
 		min-width: 10%;

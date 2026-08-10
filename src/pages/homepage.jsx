@@ -19,7 +19,7 @@ import AllProjects from "../components/projects/allProjects";
 
 import INFO from "../data/user";
 import SEO from "../data/seo";
-import myArticles from "../data/articles";
+import internalArticles from "../data/internalArticles";
 
 import "./styles/homepage.scss";
 
@@ -172,17 +172,17 @@ const Homepage = () => {
 
 						<div className="homepage-after-title">
 							<div className="homepage-articles">
-								{myArticles.map((article, index) => (
+								{internalArticles.slice(0, 3).map((article) => (
 									<div
 										className="homepage-article"
-										key={(index + 1).toString()}
+										key={article.slug}
 									>
 										<Article
-											key={(index + 1).toString()}
-											date={article().date}
-											title={article().title}
-											description={article().description}
-											link={"/article/" + (index + 1)}
+											key={article.slug}
+											date={article.date}
+											title={article.title}
+											description={article.description}
+											link={"/article/" + article.slug}
 										/>
 									</div>
 								))}

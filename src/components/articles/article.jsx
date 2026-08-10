@@ -1,12 +1,24 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faChevronRight } from "@fortawesome/free-solid-svg-icons";
+import { faChevronRight, faExternalLinkAlt } from "@fortawesome/free-solid-svg-icons";
 
 import "./style/article.scss";
 
 const Article = (props) => {
-	const { date, title, description, link } = props;
+	const { date, title, description, link, image } = props;
+
+	const isExternal = link && link.startsWith("http");
+
+	const linkProps = isExternal
+		? {
+				href: link,
+				target: "_blank",
+				rel: "noopener noreferrer",
+		  }
+		: { to: link };
+
+	const LinkWrapper = isExternal ? "a" : Link;
 
 	return (
 		<React.Fragment>
@@ -15,19 +27,24 @@ const Article = (props) => {
 					<div className="article-date">{date}</div>
 				</div>
 
-				<Link to={link}>
+				<LinkWrapper {...linkProps}>
 					<div className="article-right-side">
 						<div className="article-title">{title}</div>
 						<div className="article-description">{description}</div>
+						{image && (
+							<div className="article-image">
+								<img src={image} alt={title} />
+							</div>
+						)}
 						<div className="article-link">
-							Read Article{" "}
+							{isExternal ? "Read More " : "Read Article "}
 							<FontAwesomeIcon
 								style={{ fontSize: "10px" }}
-								icon={faChevronRight}
+								icon={isExternal ? faExternalLinkAlt : faChevronRight}
 							/>
 						</div>
 					</div>
-				</Link>
+				</LinkWrapper>
 			</div>
 		</React.Fragment>
 	);
