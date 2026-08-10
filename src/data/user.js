@@ -3,7 +3,7 @@ const INFO = {
 		title: "Alexander Coronel — Senior Software Developer",
 		name: "Alexander Coronel",
 		email: "alexcoronel1995@gmail.com",
-		logo: "../logo.png",
+		logo: process.env.PUBLIC_URL + "/logo.png",
 	},
 
 	socials: {
