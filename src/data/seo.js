@@ -21,13 +21,6 @@ const SEO = [
 	},
 
 	{
-		page: "projects",
-		description:
-			"Senior Software Developer specializing in full-stack systems and AI integration. Check out my portfolio of high-performance applications built with Node.js, TypeScript, React, and Haskell.",
-		keywords: ["Alexander Coronel", "Senior Software Developer", "Full-stack", "AI Integration"],
-	},
-
-	{
 		page: "contact",
 		description:
 			"If you're interested in collaborating on a project, feel free to reach out to me. I'm always open to new ideas and opportunities.",

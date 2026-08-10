@@ -70,27 +70,33 @@
 }
 
 .homepage-after-title {
-	display: flex;
+	padding-top: 50px;
 }
 
-.homepage-projects {
-	flex-basis: 300px;
-	padding-top: 40px;
+.homepage-experience {
+	padding-bottom: 30px;
+}
+
+.homepage-education-skills {
+	display: flex;
+	gap: 30px;
+	padding-bottom: 30px;
+}
+
+.homepage-education {
+	flex-basis: 50%;
+}
+
+.homepage-skills {
+	flex-basis: 50%;
 }
 
 .homepage-articles {
-	flex-basis: 900px;
-	padding-top: 30px;
-	margin-left: -30px;
+	padding-top: 20px;
 }
 
 .homepage-article {
 	padding-bottom: 5px;
-}
-
-.homepage-works {
-	flex-basis: 600px;
-	padding-top: 30px;
 }
 
 @media (max-width: 1024px) {
@@ -124,27 +130,29 @@
 	}
 
 	.homepage-image-container {
+		width: 100%;
+		height: auto;
+		max-width: 370px;
 		padding-top: 50px;
 		padding-bottom: 50px;
 		margin-left: 10px;
 		order: 1;
 	}
 
-	.homepage-after-title {
+	.homepage-education-skills {
 		flex-direction: column;
+		gap: 30px;
 	}
 
-	.homepage-projects {
+	.homepage-education {
+		flex-basis: auto;
+	}
+
+	.homepage-skills {
 		flex-basis: auto;
 	}
 
 	.homepage-articles {
 		flex-basis: auto;
-	}
-
-	.homepage-works {
-		flex-basis: auto;
-		margin-left: -25px;
-		margin-right: -25px;
 	}
 }

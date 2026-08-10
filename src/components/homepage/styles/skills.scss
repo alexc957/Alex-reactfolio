@@ -1,0 +1,18 @@
+@use "../../../data/styles.scss";
+
+.skills-body {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 10px;
+	margin-bottom: 10px;
+}
+
+.skill-tag {
+	font-size: 13px;
+	font-weight: 500;
+	color: white;
+	background: var(--surface-hover);
+	border: 1px solid var(--surface-border);
+	border-radius: 20px;
+	padding: 6px 14px;
+}
