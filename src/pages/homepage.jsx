@@ -12,8 +12,9 @@ import Logo from "../components/common/logo";
 import Footer from "../components/common/footer";
 import NavBar from "../components/common/navBar";
 import Article from "../components/homepage/article";
-import Works from "../components/homepage/works";
-import AllProjects from "../components/projects/allProjects";
+import Experience from "../components/homepage/experience";
+import Education from "../components/homepage/education";
+import Skills from "../components/homepage/skills";
 
 import INFO from "../data/user";
 import SEO from "../data/seo";
@@ -144,11 +145,21 @@ const Homepage = () => {
 							</a>
 						</div>
 
-						<div className="homepage-projects">
-							<AllProjects />
-						</div>
-
 						<div className="homepage-after-title">
+							<div className="homepage-experience">
+								<Experience />
+							</div>
+
+							<div className="homepage-education-skills">
+								<div className="homepage-education">
+									<Education />
+								</div>
+
+								<div className="homepage-skills">
+									<Skills />
+								</div>
+							</div>
+
 							<div className="homepage-articles">
 								{internalArticles.slice(0, 3).map((article) => (
 									<div
@@ -164,10 +175,6 @@ const Homepage = () => {
 										/>
 									</div>
 								))}
-							</div>
-
-							<div className="homepage-works">
-								<Works />
 							</div>
 						</div>
 
