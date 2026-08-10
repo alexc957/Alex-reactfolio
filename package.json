@@ -9,6 +9,7 @@
 	},
 	"license": "MIT",
 	"private": true,
+	"homepage": "https://alexc957.github.io/Alex-reactfolio",
 	"dependencies": {
 		"@fortawesome/fontawesome-svg-core": "^6.4.0",
 		"@fortawesome/free-brands-svg-icons": "^6.4.0",
