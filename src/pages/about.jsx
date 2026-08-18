@@ -56,6 +56,7 @@ const About = () => {
 										href={INFO.main.resume}
 										target="_blank"
 										rel="noreferrer"
+										download="Alexander_Coronel_Resume.pdf"
 										className="about-resume-button"
 									>
 										<FontAwesomeIcon icon={faFileDownload} />

@@ -150,6 +150,7 @@ const Homepage = () => {
 								href={INFO.main.resume}
 								target="_blank"
 								rel="noreferrer"
+								download="Alexander_Coronel_Resume.pdf"
 								className="homepage-resume-button"
 							>
 								<FontAwesomeIcon icon={faFileDownload} />
