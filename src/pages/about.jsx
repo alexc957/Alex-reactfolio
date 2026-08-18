@@ -1,5 +1,7 @@
 import React, { useEffect } from "react";
 import { Helmet } from "react-helmet";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faFileDownload } from "@fortawesome/free-solid-svg-icons";
 
 import NavBar from "../components/common/navBar";
 import Footer from "../components/common/footer";
@@ -47,6 +49,19 @@ const About = () => {
 
 								<div className="subtitle about-subtitle">
 									{INFO.about.description}
+								</div>
+
+								<div className="about-resume">
+									<a
+										href={INFO.main.resume}
+										target="_blank"
+										rel="noreferrer"
+										download="Alexander_Coronel_Resume.pdf"
+										className="about-resume-button"
+									>
+										<FontAwesomeIcon icon={faFileDownload} />
+										Download CV
+									</a>
 								</div>
 							</div>
 
