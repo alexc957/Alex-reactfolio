@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Alexander Coronel — Resume</title>
+<style>
+  @page {
+    size: A4;
+    margin: 0;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 9.5pt;
+    line-height: 1.32;
+    color: #1f2430;
+    background: #fff;
+  }
+  .page {
+    width: 210mm;
+    min-height: 297mm;
+    margin: 0 auto;
+    padding: 11mm 13mm 10mm 13mm;
+  }
+  header {
+    text-align: center;
+    border-bottom: 2px solid #1f2430;
+    padding-bottom: 5mm;
+    margin-bottom: 4.5mm;
+  }
+  h1 {
+    font-size: 21pt;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    font-weight: 700;
+  }
+  .tagline {
+    margin-top: 1.5mm;
+    font-size: 10.5pt;
+    font-weight: 600;
+    color: #2b3a67;
+  }
+  .contact {
+    margin-top: 1.5mm;
+    font-size: 8.8pt;
+    color: #444;
+  }
+  .contact a { color: #444; text-decoration: none; }
+  .contact .sep { margin: 0 4px; color: #999; }
+  .contact .line2 { margin-top: 0.6mm; }
+  h2 {
+    font-size: 10.5pt;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    color: #2b3a67;
+    border-bottom: 1px solid #c9d0de;
+    padding-bottom: 1mm;
+    margin: 4mm 0 2mm 0;
+  }
+  h2:first-of-type { margin-top: 2mm; }
+  section p { text-align: justify; }
+  ul { list-style: none; }
+  ul.bullets { margin-top: 1mm; }
+  ul.bullets li {
+    padding-left: 4.5mm;
+    text-indent: -4.5mm;
+    margin-bottom: 1mm;
+    text-align: justify;
+  }
+  ul.bullets li::before {
+    content: "\2022";
+    padding-right: 2.5mm;
+    color: #2b3a67;
+  }
+  .skills li { margin-bottom: 1mm; }
+  .skills strong { color: #1f2430; }
+  .job { margin-bottom: 3mm; }
+  .job-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+  .job-head .role { font-weight: 700; font-size: 10pt; }
+  .job-head .role .co { font-weight: 600; color: #2b3a67; }
+  .job-head .dates { font-size: 8.8pt; color: #555; white-space: nowrap; }
+  .job-head .place { font-size: 8.8pt; color: #666; font-style: italic; }
+  .edu { display: flex; justify-content: space-between; align-items: baseline; }
+  .edu .deg { font-weight: 700; }
+  .edu .school { color: #2b3a67; }
+  .edu .dates { font-size: 8.8pt; color: #555; white-space: nowrap; }
+  .langs { display: flex; justify-content: space-between; max-width: 70mm; }
+  .langs span strong { color: #1f2430; }
+  .langs .lvl { color: #555; }
+</style>
+</head>
+<body>
+  <div class="page">
+    <header>
+      <h1>Alexander Coronel</h1>
+      <div class="tagline">Senior Software Developer &mdash; Full-Stack Systems &amp; AI Integration</div>
+      <div class="contact">
+        Quito, Ecuador<span class="sep">|</span>alexcoronel1995@gmail.com<span class="sep">|</span>+593 98 269 7669
+        <div class="line2">
+          <a href="https://www.linkedin.com/in/acoronel95">linkedin.com/in/acoronel95</a><span class="sep">|</span><a href="https://github.com/alexc957">github.com/alexc957</a><span class="sep">|</span><a href="https://alexc957.github.io/Alex-reactfolio/">alexc957.github.io/Alex-reactfolio</a>
+        </div>
+      </div>
+    </header>
+
+    <section>
+      <h2>Summary</h2>
+      <p>Senior Software Developer specializing in full-stack systems and AI integration. Builds high-performance applications with Node.js, TypeScript, and React while optimizing database performance and automating workflows. Experienced working on a large Haskell-based platform and hands-on with the AI agentic paradigm (Claude, Copilot). Proven ability to lead data migration projects and enhance business processes with advanced technology solutions.</p>
+    </section>
+
+    <section>
+      <h2>Skills</h2>
+      <ul class="skills">
+        <li><strong>Languages:</strong> JavaScript, TypeScript, Python, Go, Haskell, Java, HTML, CSS</li>
+        <li><strong>Frameworks &amp; Libraries:</strong> React, React Native, Node.js, Express.js, NestJS, Angular, Django, Flask</li>
+        <li><strong>Databases:</strong> PostgreSQL, MongoDB, MySQL</li>
+        <li><strong>AI &amp; Machine Learning:</strong> OpenAI GPT API, PyTorch, Keras, scikit-learn; agentic workflows with Claude &amp; Copilot</li>
+        <li><strong>Cloud &amp; Automation:</strong> AWS (S3, RDS/PostgreSQL), Google Cloud Scheduler, Cron Jobs</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Experience</h2>
+
+      <div class="job">
+        <div class="job-head">
+          <div class="role">Software Developer &mdash; <span class="co">StackBuilders S.A.</span></div>
+          <div class="dates">Jul 2022 &ndash; Present</div>
+        </div>
+        <div class="place">Quito, Ecuador</div>
+        <ul class="bullets">
+          <li>Engineered a high-performance Node.js CLI migrating 40% of legacy data from Wagtail (CMS) to MDX files, streamlining a &ldquo;Docs as Code&rdquo; documentation system.</li>
+          <li>Developed a Go CLI tool automating data archiving from AWS PostgreSQL to S3 buckets, improving storage efficiency.</li>
+          <li>Led an OpenAI API Proof of Concept integrating LLMs into business processes, improving automation capabilities and informing future implementations.</li>
+          <li>Executed advanced query optimization on large-scale databases, significantly reducing latency for backend services.</li>
+          <li>Built complex systems with Haskell and Django, leveraging strict typing and functional principles to enhance reliability and maintainability.</li>
+          <li>Gained hands-on experience with the AI agentic paradigm using Claude and Copilot to streamline and enhance development workflows.</li>
+          <li>Maintained a large-scale CMS built with AEM (Adobe Experience Manager) and Java.</li>
+        </ul>
+      </div>
+
+      <div class="job">
+        <div class="job-head">
+          <div class="role">Software Developer &mdash; <span class="co">Iqbit</span></div>
+          <div class="dates">Aug 2021 &ndash; Jun 2022</div>
+        </div>
+        <div class="place">Quito, Ecuador</div>
+        <ul class="bullets">
+          <li>Built a full-stack debt tracking system on a modern JavaScript stack, achieving high availability and data consistency.</li>
+          <li>Developed and maintained a React Native radio application, ensuring real-time streaming stability.</li>
+          <li>Automated jobs with Google Cloud Scheduler and Cron Jobs, reducing manual processing by 20%.</li>
+        </ul>
+      </div>
+
+      <div class="job">
+        <div class="job-head">
+          <div class="role">Junior Web Developer &mdash; <span class="co">Mosflor SA</span></div>
+          <div class="dates">May 2019 &ndash; Nov 2019</div>
+        </div>
+        <div class="place">Quito, Ecuador</div>
+        <ul class="bullets">
+          <li>Developed an online store prototype using Angular and Flask, facilitating user testing and feedback.</li>
+          <li>Created database documentation and schema modeling, improving transparency and developer onboarding.</li>
+          <li>Built responsive web applications with HTML, CSS, and JavaScript.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <h2>Education</h2>
+      <div class="edu">
+        <div class="deg">Informatics and Computer Systems Engineering &mdash; <span class="school">Escuela Polit&eacute;cnica Nacional</span></div>
+        <div class="dates">Class of 2020</div>
+      </div>
+      <div class="place">Quito, Ecuador</div>
+    </section>
+
+    <section>
+      <h2>Languages</h2>
+      <div class="langs">
+        <span><strong>English</strong> &mdash; <span class="lvl">Advanced (C1)</span></span>
+        <span><strong>Spanish</strong> &mdash; <span class="lvl">Native</span></span>
+      </div>
+    </section>
+  </div>
+</body>
+</html>
