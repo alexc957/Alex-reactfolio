@@ -1,6 +1,6 @@
 const INFO = {
 	main: {
-		title: "Alexander Coronel — Senior Software Developer",
+		title: "Alexander Coronel — Software Engineer",
 		name: "Alexander Coronel",
 		email: "alexcoronel1995@gmail.com",
 		logo: process.env.PUBLIC_URL + "/logo.png",
@@ -13,15 +13,15 @@ const INFO = {
 	},
 
 	homepage: {
-		title: "Senior Software Developer — full-stack systems & AI integration.",
+		title: "Software Engineer — Backend, Data & AI Integration.",
 		description:
-			"I am a Senior Software Developer specializing in full-stack systems and AI integration. I have experience building high-performance applications with Node.js, TypeScript, and React, while optimizing database performance and automating workflows. I have also worked on a large Haskell-based platform and have hands-on experience with the AI agentic paradigm using Claude and Copilot. I have a proven ability to lead data migration projects and enhance business processes with advanced technology solutions.",
+			"Software engineer with 6+ years of experience building and optimizing production systems for clients such as McKinsey & Company and Twilio. Specialized in PostgreSQL design and performance tuning, ETL pipelines, large-scale content and data migrations, and integrating LLMs into real products. Cut critical query times from ~10s to under 1s, led a Haskell-based survey platform, and work daily with agentic development workflows using Claude.",
 	},
 
 	about: {
-		title: "I’m Alexander Coronel. I live in the Ecuador.",
+		title: "I’m Alexander Coronel. I live in Quito, Ecuador.",
 		description:
-			"I am a Senior Software Developer specializing in full-stack systems and AI integration. I build high-performance applications with Node.js, TypeScript, and React, while optimizing database performance and automating workflows. Throughout my career I have worked on a large Haskell-based platform and gained hands-on experience with the AI agentic paradigm using Claude and Copilot. I have a proven ability to lead data migration projects and enhance business processes with advanced technology solutions.",
+			"I’m a software engineer with 6+ years of experience building and optimizing production systems for clients such as McKinsey & Company and Twilio. I specialize in PostgreSQL design and performance tuning, ETL pipelines, large-scale content and data migrations, and integrating LLMs into real products. I enjoy owning architecture decisions, collaborating directly with stakeholders, and mentoring other developers.",
 	},
 
 	articles: {
@@ -39,17 +39,50 @@ const INFO = {
 	experience: [
 		{
 			role: "Software Developer",
-			company: "StackBuilders S.A",
+			company: "Stack Builders S.A.",
 			location: "Quito, Ecuador",
 			duration: "07/2022 - Current",
-			points: [
-				"Node.js CLI Development: Engineered a high-performance CLI tool in Node.js to migrate 40% of legacy data from Wagtail (CMS) to MDX files, streamlining the documentation process for a \"Docs as Code\" system.",
-				"Data Engineering with Go: Developed a CLI tool in Golang to automate data archiving from AWS PostgreSQL to S3 buckets, improving storage efficiency.",
-				"AI Integration: Led a Proof of Concept (PoC) with the OpenAI API to integrate LLMs into business processes, improving automation capabilities and providing insights for future implementations.",
-				"Performance Optimization: Executed advanced query optimization for large-scale databases, significantly reducing latency for backend services.",
-				"Backend Systems: Developed complex systems with Haskell and Django, leveraging strict typing and functional principles to enhance system reliability and maintainability.",
-				"Agentic Programming: Gained hands-on experience with the AI agentic paradigm using Claude and Copilot to streamline and enhance development workflows.",
-				"CMS Maintenance: Maintained a large-scale CMS built with AEM (Adobe Experience Manager) technologies and Java.",
+			projects: [
+				{
+					name: "Survey Platform — Backend, Data & AI Systems",
+					stack: "Haskell, PostgreSQL, Go",
+					points: [
+						"Led development of a large-scale Haskell survey platform for several months, owning architecture, technical decisions, implementation and stakeholder communication.",
+						"Cut critical production query times from ~10s to under 1s by redesigning PostgreSQL schemas (new tables, views, targeted indexes) and tuning multi-table joins with EXPLAIN ANALYZE.",
+						"Resolved production concurrency issues with PostgreSQL locking (FOR UPDATE), preventing competing processes from waiting needlessly on shared resources.",
+						"Built a Go archival system, scheduled with systemd, that moved data older than 2 years (nearly 40% of stored data, unused by reports and application logic) to compressed archives in Amazon S3 and purged it from the operational database, improving database performance.",
+						"Designed an OpenAI-based proof of concept for survey fraud detection that evaluates whether responses are contextually relevant to each question, with a Hugging Face model as fallback.",
+					],
+				},
+				{
+					name: "McKinsey & Company — Data Engineering & Analytics",
+					stack: "Microsoft Fabric",
+					points: [
+						"Consolidated 9 KNIME workflows into 2 ETL pipelines in Microsoft Fabric (a ~78% reduction), simplifying the data-processing architecture.",
+						"Designed a historical data model that replaced Excel-based data management and enabled scalable analytics and reporting in Tableau.",
+						"Created AI agent skills that help data analysts understand the data model and build reports faster.",
+						"Partnered directly with infrastructure owners and stakeholders to design and deliver the new processing and reporting architecture; contributed to a supplier diversity and inclusivity reporting platform.",
+					],
+				},
+				{
+					name: "Twilio — Documentation & Web Platform",
+					stack: "Node.js, Django/Wagtail, AEM",
+					points: [
+						"Built a Node.js CLI that migrated ~600 pages (about 40% of a large documentation repository) from Wagtail and PostgreSQL to MDX, converting HTML, Markdown, code blocks and nested blocks while preserving page structure for a Docs-as-Code architecture.",
+						"Developed features and reusable components on a large Django/Wagtail documentation platform, and built CLI tooling to move existing content to new page components.",
+						"Improved multilingual content management by integrating and extending Wagtail Localize to fix gaps in the existing internationalization workflow.",
+						"Maintained and extended Java components on Adobe Experience Manager (AEM) powering public product, pricing and blog content, resolving production issues.",
+					],
+				},
+				{
+					name: "AI-First Development Initiative",
+					stack: "Claude",
+					points: [
+						"Took part in an internal agentic development initiative using Claude, working with contracts and Architectural Decision Records that define agent capabilities, limits, validation requirements and workflows.",
+						"Contributed to automated ticket creation, code review and adversarial validation, where multiple agents independently evaluate each change.",
+						"Conducted code reviews and mentored developers and interns across projects.",
+					],
+				},
 			],
 		},
 
@@ -59,9 +92,9 @@ const INFO = {
 			location: "Quito, Ecuador",
 			duration: "08/2021 - 06/2022",
 			points: [
-				"Full Stack Systems: Developed a debt tracking system with a modern JavaScript stack, achieving high availability and data consistency.",
-				"Mobile Development: Built and maintained a Radio Application using React Native, ensuring real-time streaming stability.",
-				"Process Automation: Automated jobs with Google Cloud Scheduler and Cron Jobs, reducing manual processing by 20%.",
+				"Built a full-stack debt tracking system, covering application development, backend services and data management.",
+				"Developed and maintained a React Native radio app with real-time audio streaming.",
+				"Automated recurring processes with Google Cloud Scheduler and Cron jobs, reducing manual processing by ~20%.",
 			],
 		},
 
@@ -71,18 +104,15 @@ const INFO = {
 			location: "Quito, Ecuador",
 			duration: "05/2019 - 11/2019",
 			points: [
-				"Developed an online store prototype using Angular for the frontend and Flask for the backend, facilitating user testing and feedback.",
-				"Created documentation and schema modeling for the database, enhancing transparency and streamlining developer onboarding.",
-				"Developed responsive web applications using HTML, CSS, and JavaScript.",
-				"Collaborated with designers to create user-friendly interfaces for various projects.",
-				"Assisted in debugging and troubleshooting issues within existing codebases.",
+				"Developed an e-commerce prototype with Angular and Flask for user testing and product feedback.",
+				"Designed database schemas and technical documentation to improve developer onboarding.",
 			],
 		},
 	],
 
 	education: [
 		{
-			degree: "Informatics and Computer Systems Engineering",
+			degree: "B.Eng. in Informatics and Computer Systems Engineering",
 			institution: "Escuela Politécnica Nacional",
 			location: "Quito, Ecuador",
 			duration: "Class of 2020",
@@ -90,23 +120,47 @@ const INFO = {
 	],
 
 	skills: [
-		"JavaScript",
-		"TypeScript",
-		"React",
-		"HTML",
-		"Node.js",
-		"Express.js",
-		"NestJS",
-		"Django",
-		"Flask",
-		"Python",
-		"MongoDB",
-		"PostgreSQL",
-		"MySQL",
-		"Keras",
-		"PyTorch",
-		"Scikit-learn",
-		"GPT API",
+		{
+			category: "Languages",
+			items: ["TypeScript", "JavaScript", "Python", "Go", "Haskell", "Java"],
+		},
+		{
+			category: "Backend & Frontend",
+			items: [
+				"Node.js",
+				"NestJS",
+				"Express.js",
+				"Django",
+				"Flask",
+				"React",
+				"React Native",
+				"Angular",
+			],
+		},
+		{
+			category: "Data & Cloud",
+			items: [
+				"PostgreSQL",
+				"MongoDB",
+				"MySQL",
+				"Microsoft Fabric",
+				"ETL",
+				"AWS (S3, RDS)",
+				"systemd",
+				"Cron",
+				"Google Cloud Scheduler",
+			],
+		},
+		{
+			category: "AI & Tooling",
+			items: [
+				"OpenAI API",
+				"Hugging Face",
+				"Claude",
+				"GitHub Copilot",
+				"agentic development workflows",
+			],
+		},
 	],
 };
 

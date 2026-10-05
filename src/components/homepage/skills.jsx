@@ -15,10 +15,19 @@ const Skills = () => {
 				title="Skills"
 				body={
 					<div className="skills-body">
-						{INFO.skills.map((skill, index) => (
-							<span className="skill-tag" key={index}>
-								{skill}
-							</span>
+						{INFO.skills.map((group, index) => (
+							<div className="skill-group" key={index}>
+								<div className="skill-category">
+									{group.category}
+								</div>
+								<div className="skill-tags">
+									{group.items.map((skill, i) => (
+										<span className="skill-tag" key={i}>
+											{skill}
+										</span>
+									))}
+								</div>
+							</div>
 						))}
 					</div>
 				}

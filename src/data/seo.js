@@ -2,29 +2,41 @@ const SEO = [
 	{
 		page: "home",
 		description:
-			"Senior Software Developer specializing in full-stack systems and AI integration. Experienced in building high-performance applications with Node.js, TypeScript, and React, optimizing database performance, and automating workflows.",
-		keywords: ["Alexander Coronel", "Senior Software Developer", "Full-stack", "AI Integration"],
+			"Software engineer with 6+ years of experience building and optimizing production systems. Specialized in PostgreSQL design and performance tuning, ETL pipelines, large-scale data migrations, and integrating LLMs into real products.",
+		keywords: [
+			"Alexander Coronel",
+			"Software Engineer",
+			"Backend Engineer",
+			"Data Engineering",
+			"AI Integration",
+		],
 	},
 
 	{
 		page: "about",
 		description:
-			"Senior Software Developer specializing in full-stack systems and AI integration. Experienced with Node.js, TypeScript, React, Haskell, and the AI agentic paradigm with Claude and Copilot.",
-		keywords: ["Alexander Coronel", "Senior Software Developer", "Full-stack", "AI Integration"],
+			"Software engineer with 6+ years of experience building and optimizing production systems for clients such as McKinsey & Company and Twilio. Experienced with PostgreSQL, Haskell, Go, ETL pipelines, and agentic development workflows using Claude.",
+		keywords: [
+			"Alexander Coronel",
+			"Software Engineer",
+			"Backend Engineer",
+			"PostgreSQL",
+			"AI Integration",
+		],
 	},
 
 	{
 		page: "articles",
 		description:
 			"Chronological collection of my long-form thoughts on programming, leadership, product design, and more.",
-		keywords: ["Alexander Coronel", "Senior Software Developer", "Full-stack", "AI Integration"],
+		keywords: ["Alexander Coronel", "Software Engineer", "Programming", "Leadership"],
 	},
 
 	{
 		page: "contact",
 		description:
 			"If you're interested in collaborating on a project, feel free to reach out to me. I'm always open to new ideas and opportunities.",
-		keywords: ["Alexander Coronel", "Senior Software Developer", "Full-stack", "AI Integration"],
+		keywords: ["Alexander Coronel", "Software Engineer", "Contact"],
 	},
 ];
 
