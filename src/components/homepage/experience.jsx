@@ -28,11 +28,43 @@ const Experience = () => {
 								<div className="experience-company">
 									{work.company}, {work.location}
 								</div>
-								<ul className="experience-points">
-									{work.points.map((point, i) => (
-										<li key={i}>{point}</li>
-									))}
-								</ul>
+
+								{work.projects ? (
+									<div className="experience-projects">
+										{work.projects.map((project, pi) => (
+											<div
+												className="experience-project"
+												key={pi}
+											>
+												<div className="experience-project-head">
+													<div className="experience-project-name">
+														{project.name}
+													</div>
+													{project.stack && (
+														<div className="experience-project-stack">
+															{project.stack}
+														</div>
+													)}
+												</div>
+												<ul className="experience-points">
+													{project.points.map(
+														(point, i) => (
+															<li key={i}>
+																{point}
+															</li>
+														)
+													)}
+												</ul>
+											</div>
+										))}
+									</div>
+								) : (
+									<ul className="experience-points">
+										{work.points.map((point, i) => (
+											<li key={i}>{point}</li>
+										))}
+									</ul>
+								)}
 							</div>
 						))}
 					</div>

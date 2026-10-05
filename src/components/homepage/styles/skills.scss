@@ -2,9 +2,29 @@
 
 .skills-body {
 	display: flex;
-	flex-wrap: wrap;
-	gap: 10px;
+	flex-direction: column;
+	gap: 16px;
 	margin-bottom: 10px;
+}
+
+.skill-group {
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
+}
+
+.skill-category {
+	font-size: 12px;
+	font-weight: 700;
+	text-transform: uppercase;
+	letter-spacing: 0.06em;
+	color: var(--tertiary-color);
+}
+
+.skill-tags {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 8px;
 }
 
 .skill-tag {
